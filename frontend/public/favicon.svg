@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="64" height="64" role="img" aria-label="HerSpace">
+  <defs>
+    <linearGradient id="hs-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fde7ee" />
+      <stop offset="1" stop-color="#efe3fb" />
+    </linearGradient>
+    <linearGradient id="hs-petal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4889a" />
+      <stop offset="0.55" stop-color="#ec6788" />
+      <stop offset="1" stop-color="#b388dd" />
+    </linearGradient>
+    <radialGradient id="hs-core" cx="0.5" cy="0.42" r="0.62">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#fbe6ee" />
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="118" fill="url(#hs-bg)" />
+  <g fill="url(#hs-petal)">
+    <path d="M256 262 C216 244 208 188 232 150 C240 136 248 128 256 128 C264 128 272 136 280 150 C304 188 296 244 256 262 Z" transform="rotate(0 256 256)" />
+    <path d="M256 262 C216 244 208 188 232 150 C240 136 248 128 256 128 C264 128 272 136 280 150 C304 188 296 244 256 262 Z" transform="rotate(72 256 256)" />
+    <path d="M256 262 C216 244 208 188 232 150 C240 136 248 128 256 128 C264 128 272 136 280 150 C304 188 296 244 256 262 Z" transform="rotate(144 256 256)" />
+    <path d="M256 262 C216 244 208 188 232 150 C240 136 248 128 256 128 C264 128 272 136 280 150 C304 188 296 244 256 262 Z" transform="rotate(216 256 256)" />
+    <path d="M256 262 C216 244 208 188 232 150 C240 136 248 128 256 128 C264 128 272 136 280 150 C304 188 296 244 256 262 Z" transform="rotate(288 256 256)" />
+  </g>
+  <path
+    d="M256 298 C242 280 212 277 212 251 C212 237 224 230 236 235 C245 239 252 246 256 252 C260 246 267 239 276 235 C288 230 300 237 300 251 C300 277 270 280 256 298 Z"
+    fill="url(#hs-core)"
+  />
+</svg>

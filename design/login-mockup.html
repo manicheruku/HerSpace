@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HerSpace — Login Design Mockup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --blossom-50: #fdf3f5;
+        --blossom-100: #fbe6ee;
+        --blossom-200: #f7c6cf;
+        --blossom-300: #f7a8c0;
+        --blossom-400: #f4889a;
+        --blossom-500: #ec6788;
+        --blossom-600: #d94e74;
+        --lilac-50: #f6f1fc;
+        --lilac-100: #efe3fb;
+        --lilac-200: #d9c2f0;
+        --lilac-400: #b388dd;
+        --ink-900: #2b2440;
+        --ink-700: #4b4361;
+        --ink-500: #756c87;
+        --ink-300: #a89fb8;
+        --card: #ffffff;
+        --radius-card: 1.25rem;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+        color: var(--ink-900);
+        background: linear-gradient(160deg, var(--blossom-50), var(--lilac-50));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+
+      /* Phone frame so you can see it as a mobile-first PWA */
+      .phone {
+        width: 390px;
+        min-height: 800px;
+        background: linear-gradient(170deg, #fdf7fb 0%, #f6f1fc 100%);
+        border-radius: 38px;
+        box-shadow: 0 30px 70px rgba(120, 80, 130, 0.25);
+        padding: 40px 28px 32px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* soft decorative blobs */
+      .blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(8px);
+        opacity: 0.55;
+      }
+      .blob-1 {
+        width: 180px;
+        height: 180px;
+        background: var(--blossom-200);
+        top: -60px;
+        right: -50px;
+      }
+      .blob-2 {
+        width: 140px;
+        height: 140px;
+        background: var(--lilac-200);
+        bottom: 120px;
+        left: -50px;
+      }
+
+      .brand {
+        position: relative;
+        text-align: center;
+        margin-top: 18px;
+      }
+      .logo {
+        width: 76px;
+        height: 76px;
+        margin: 0 auto 14px;
+        border-radius: 22px;
+        display: block;
+        box-shadow: 0 12px 26px rgba(236, 103, 136, 0.35);
+      }
+      .brand h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: 26px;
+        margin: 0;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+      }
+      .brand p {
+        margin: 6px 0 0;
+        color: var(--ink-500);
+        font-size: 14px;
+      }
+
+      .welcome {
+        position: relative;
+        margin-top: 40px;
+      }
+      .welcome h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: 22px;
+        margin: 0 0 4px;
+        font-weight: 600;
+      }
+      .welcome span {
+        color: var(--ink-500);
+        font-size: 14px;
+      }
+
+      form {
+        position: relative;
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .field label {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--ink-700);
+        margin-bottom: 7px;
+      }
+      .input {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--card);
+        border: 1px solid #f0e6ef;
+        border-radius: 16px;
+        padding: 14px 16px;
+        box-shadow: 0 4px 14px rgba(120, 80, 130, 0.06);
+      }
+      .input svg {
+        width: 18px;
+        height: 18px;
+        color: var(--ink-300);
+        flex: none;
+      }
+      .input input {
+        border: none;
+        outline: none;
+        font-size: 15px;
+        width: 100%;
+        background: transparent;
+        color: var(--ink-900);
+        font-family: inherit;
+      }
+      .input input::placeholder {
+        color: var(--ink-300);
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        margin-top: -4px;
+      }
+      .remember {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--ink-500);
+      }
+      .remember .box {
+        width: 18px;
+        height: 18px;
+        border-radius: 6px;
+        border: 1.5px solid var(--blossom-300);
+        background: var(--blossom-50);
+      }
+      .forgot {
+        color: var(--blossom-600);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .btn {
+        margin-top: 6px;
+        border: none;
+        border-radius: 16px;
+        padding: 16px;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        background: linear-gradient(135deg, var(--blossom-500), var(--blossom-400));
+        box-shadow: 0 14px 26px rgba(236, 103, 136, 0.38);
+        cursor: pointer;
+      }
+
+      .divider {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--ink-300);
+        font-size: 12px;
+        margin: 26px 0 18px;
+      }
+      .divider::before,
+      .divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #eaddec;
+      }
+
+      .social {
+        display: flex;
+        gap: 12px;
+      }
+      .social button {
+        flex: 1;
+        background: var(--card);
+        border: 1px solid #f0e6ef;
+        border-radius: 14px;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 14px;
+        color: var(--ink-700);
+        font-family: inherit;
+        cursor: pointer;
+      }
+
+      .signup {
+        position: relative;
+        text-align: center;
+        margin-top: auto;
+        padding-top: 26px;
+        font-size: 14px;
+        color: var(--ink-500);
+      }
+      .signup a {
+        color: var(--blossom-600);
+        font-weight: 600;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="phone">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+
+      <div class="brand">
+        <img class="logo" src="logo-icon.svg" alt="HerSpace logo" />
+        <h1>HerSpace</h1>
+        <p>A space for your best life, every day.</p>
+      </div>
+
+      <div class="welcome">
+        <h2>Welcome back 🌸</h2>
+        <span>Sign in to continue your day</span>
+      </div>
+
+      <form onsubmit="return false">
+        <div class="field">
+          <label>Email</label>
+          <div class="input">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="5" width="18" height="14" rx="3" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+            <input type="email" placeholder="you@example.com" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Password</label>
+          <div class="input">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="4" y="10" width="16" height="11" rx="3" />
+              <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+            </svg>
+            <input type="password" placeholder="••••••••" />
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="row">
+          <span class="remember"><span class="box"></span> Remember me</span>
+          <a class="forgot" href="#">Forgot password?</a>
+        </div>
+
+        <button class="btn">Sign in</button>
+      </form>
+
+      <div class="divider">or continue with</div>
+      <div class="social">
+        <button>
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 11v3.3h4.6c-.2 1.2-1.5 3.5-4.6 3.5-2.8 0-5-2.3-5-5.1S9.2 6.6 12 6.6c1.6 0 2.6.7 3.2 1.2l2.2-2.1C16 4.4 14.2 3.6 12 3.6 7.6 3.6 4 7.1 4 11.5S7.6 19.5 12 19.5c4.6 0 7.6-3.2 7.6-7.7 0-.5 0-.9-.1-1.3H12Z"/></svg>
+          Google
+        </button>
+        <button>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#1d1d1f"><path d="M16.4 12.7c0-2 1.6-2.9 1.7-3-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7-.6 0-1.6-.7-2.6-.7-1.3 0-2.6.8-3.2 2-1.4 2.4-.4 6 1 7.9.7.9 1.4 2 2.4 1.9 1-.04 1.3-.6 2.5-.6s1.5.6 2.6.6c1 0 1.7-.9 2.4-1.9.5-.7.7-1.4.7-1.4s-1.5-.6-1.5-2.3Zm-2-6.6c.5-.7.9-1.6.8-2.5-.8 0-1.7.5-2.3 1.2-.5.6-.9 1.5-.8 2.4.9.07 1.8-.4 2.3-1.1Z"/></svg>
+          Apple
+        </button>
+      </div>
+
+      <div class="signup">
+        Don't have an account? <a href="#">Create one</a>
+      </div>
+    </div>
+  </body>
+</html>

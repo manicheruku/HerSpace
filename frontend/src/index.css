@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+/* ================================================================== */
+/* HerSpace Design System — single source of truth (per the PDD).      */
+/* Soft pastels, calm and warm. Use these tokens everywhere; do not    */
+/* hard-code raw hex values in components.                             */
+/* ================================================================== */
+@theme {
+  /* ---- Brand: blossom (primary pink / rose) ---- */
+  --color-blossom-50: #fdf3f5;
+  --color-blossom-100: #fbe6ee;
+  --color-blossom-200: #f7c6cf;
+  --color-blossom-300: #f7a8c0;
+  --color-blossom-400: #f4889a;
+  --color-blossom-500: #ec6788;
+  --color-blossom-600: #d94e74;
+  --color-blossom-700: #b83c5e;
+
+  /* ---- Brand: lilac (calm lavender) ---- */
+  --color-lilac-50: #f6f1fc;
+  --color-lilac-100: #efe3fb;
+  --color-lilac-200: #d9c2f0;
+  --color-lilac-300: #c9a8e8;
+  --color-lilac-400: #b388dd;
+  --color-lilac-500: #9b6bd0;
+
+  /* ---- Neutral ink (text) ---- */
+  --color-ink-900: #2b2440;
+  --color-ink-700: #4b4361;
+  --color-ink-500: #756c87;
+  --color-ink-300: #a89fb8;
+  --color-ink-100: #ece7f1;
+
+  /* ---- Surfaces ---- */
+  --color-surface: #fdf7fb;
+  --color-card: #ffffff;
+  --color-border: #f0e6ef;
+
+  /* ---- Feedback ---- */
+  --color-success: #4caf8f;
+  --color-warning: #e0a350;
+  --color-danger: #e26d7e;
+
+  /* ---- Semantic aliases (prefer these in components) ---- */
+  --color-primary: var(--color-blossom-500);
+  --color-primary-hover: var(--color-blossom-600);
+  --color-primary-soft: var(--color-blossom-100);
+  --color-accent: var(--color-lilac-400);
+  --color-text: var(--color-ink-900);
+  --color-text-muted: var(--color-ink-500);
+  --color-text-subtle: var(--color-ink-300);
+
+  /* ---- Typography ---- */
+  --font-display: "Poppins", "Segoe UI", system-ui, sans-serif;
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.625rem;
+  --text-3xl: 2rem;
+
+  /* ---- Radius ---- */
+  --radius-sm: 0.625rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.25rem;
+  --radius-card: 1.25rem;
+  --radius-pill: 999px;
+
+  /* ---- Elevation (soft, diffuse — calm aesthetic) ---- */
+  --shadow-card: 0 8px 24px rgba(120, 80, 130, 0.1);
+  --shadow-raised: 0 14px 36px rgba(120, 80, 130, 0.16);
+  --shadow-button: 0 12px 24px rgba(236, 103, 136, 0.35);
+
+  /* ---- App gradient ---- */
+  --gradient-app: linear-gradient(160deg, #fdf3f5, #f6f1fc);
+  --gradient-brand: linear-gradient(135deg, #ec6788, #b388dd);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--gradient-app);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+/* Reusable brand gradient text (wordmark, headings) */
+.text-gradient-brand {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

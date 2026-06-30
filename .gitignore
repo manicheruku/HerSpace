@@ -1,0 +1,28 @@
+# ---- Python / backend ----
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+backend/herspace.db
+backend/*.sqlite3
+
+# ---- Node / frontend ----
+node_modules/
+frontend/dist/
+frontend/dev-dist/
+*.local
+
+# ---- Environment & secrets ----
+.env
+*.env
+!*.env.example
+
+# ---- Editor / OS ----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db

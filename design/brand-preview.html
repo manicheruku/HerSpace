@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HerSpace — Brand Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Inter", system-ui, sans-serif;
+        background: linear-gradient(160deg, #fdf3f5, #f6f1fc);
+        color: #2b2440;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 56px 24px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .icon {
+        border-radius: 28px;
+        box-shadow: 0 18px 40px rgba(120, 80, 130, 0.22);
+      }
+      .lockup {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+      .lockup img {
+        width: 72px;
+        height: 72px;
+      }
+      .lockup .name {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 38px;
+        letter-spacing: -0.5px;
+        background: linear-gradient(120deg, #ec6788, #b388dd);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .lockup .tag {
+        font-size: 13px;
+        color: #756c87;
+        margin-top: 2px;
+      }
+      .swatches {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .sw {
+        width: 84px;
+        text-align: center;
+        font-size: 11px;
+        color: #756c87;
+      }
+      .chip {
+        height: 56px;
+        border-radius: 14px;
+        margin-bottom: 6px;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+      }
+      h3 {
+        font-family: "Poppins", sans-serif;
+        margin: 0 0 4px;
+      }
+      .label {
+        color: #756c87;
+        font-size: 13px;
+        margin-bottom: 18px;
+      }
+      .card {
+        background: #fff;
+        border-radius: 24px;
+        padding: 28px 34px;
+        box-shadow: 0 14px 36px rgba(120, 80, 130, 0.12);
+      }
+      .on-dark {
+        background: #2b2440;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h3>App icon</h3>
+      <div class="label">Home-screen / PWA icon — blossom + heart</div>
+      <div class="row">
+        <img class="icon" src="logo-icon.svg" width="128" height="128" />
+        <img class="icon" src="logo-icon.svg" width="80" height="80" />
+        <img class="icon" src="logo-icon.svg" width="48" height="48" />
+        <img class="icon on-dark" src="logo-icon.svg" width="48" height="48" />
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Logo lockup</h3>
+      <div class="label">Header / splash usage</div>
+      <div class="lockup">
+        <img src="logo-mark.svg" />
+        <div>
+          <div class="name">HerSpace</div>
+          <div class="tag">A space for your best life, every day.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Mark on its own</h3>
+      <div class="label">Transparent gradient bloom — small UI accents</div>
+      <div class="row">
+        <img src="logo-mark.svg" width="96" height="96" />
+        <img src="logo-mark.svg" width="56" height="56" />
+        <img src="logo-mark.svg" width="32" height="32" />
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Color palette</h3>
+      <div class="label">Standardized tokens used across the entire app</div>
+      <div class="swatches">
+        <div class="sw"><div class="chip" style="background:#ec6788"></div>blossom-500<br />primary</div>
+        <div class="sw"><div class="chip" style="background:#f4889a"></div>blossom-400</div>
+        <div class="sw"><div class="chip" style="background:#f7c6cf"></div>blossom-200</div>
+        <div class="sw"><div class="chip" style="background:#b388dd"></div>lilac-400</div>
+        <div class="sw"><div class="chip" style="background:#d9c2f0"></div>lilac-200</div>
+        <div class="sw"><div class="chip" style="background:#2b2440"></div>ink-900<br />text</div>
+        <div class="sw"><div class="chip" style="background:#756c87"></div>ink-500</div>
+        <div class="sw"><div class="chip" style="background:#fdf7fb"></div>surface</div>
+      </div>
+    </div>
+  </body>
+</html>
