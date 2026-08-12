@@ -85,3 +85,12 @@ App: http://localhost:5173 (requests to `/api` are proxied to the backend).
 
 Each module is built full-stack (model → schema → repository → service → router →
 tests, plus matching UI) before moving to the next.
+
+## Current feature-complete modules
+
+- Journal
+- Notes
+- Habits
+- Goals
+- Expenses
+- Memories

@@ -41,6 +41,14 @@ class Settings(BaseSettings):
     secret_key: str = "change-me"
     access_token_expire_minutes: int = 30
 
+    # Weather (Open-Meteo)
+    weather_geocoding_url: str = "https://geocoding-api.open-meteo.com/v1/search"
+    weather_forecast_url: str = "https://api.open-meteo.com/v1/forecast"
+    weather_reverse_geocoding_url: str = (
+        "https://api.bigdatacloud.net/data/reverse-geocode-client"
+    )
+    weather_cache_ttl_seconds: int = 600
+
     @field_validator("cors_origins", mode="before")
     @classmethod
     def _split_cors_origins(cls, value: object) -> object:

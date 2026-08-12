@@ -20,3 +20,6 @@ class User(IntIDMixin, TimestampMixin, Base):
     is_active: Mapped[bool] = mapped_column(
         Boolean, default=True, server_default="1", nullable=False
     )
+    city: Mapped[str] = mapped_column(
+        String(80), default="Pune", server_default="Pune", nullable=False
+    )

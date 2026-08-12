@@ -24,6 +24,14 @@
   --color-lilac-400: #b388dd;
   --color-lilac-500: #9b6bd0;
 
+  /* ---- Accent: sky (calm blue — weather/atmosphere only) ---- */
+  --color-sky-50: #eef6fe;
+  --color-sky-100: #d6ebfb;
+  --color-sky-200: #b9dbf7;
+  --color-sky-300: #93c5ef;
+  --color-sky-400: #6aa9e4;
+  --color-sky-500: #4a8bd4;
+
   /* ---- Neutral ink (text) ---- */
   --color-ink-900: #2b2440;
   --color-ink-700: #4b4361;
@@ -79,30 +87,32 @@
   --gradient-brand: linear-gradient(135deg, #ec6788, #b388dd);
 }
 
-html,
-body,
-#root {
-  height: 100%;
-}
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
 
-body {
-  margin: 0;
-  font-family: var(--font-sans);
-  color: var(--color-text);
-  background: var(--gradient-app);
-  background-attachment: fixed;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: var(--gradient-app);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--color-text);
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+  }
 }
 
 /* Reusable brand gradient text (wordmark, headings) */
@@ -111,4 +121,40 @@ h4 {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* ================================================================== */
+/* Custom themed scrollbar — applied platform-wide so we never show    */
+/* the default OS scrollbar. Soft, pill-shaped, brand-tinted.          */
+/* ================================================================== */
+
+/* Firefox + modern standards */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-blossom-200) transparent;
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-blossom-200);
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-blossom-300);
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
 }
